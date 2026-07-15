@@ -353,3 +353,235 @@
                 </canvas>
 
             </div>
+
+                        <!-- ================================================ -->
+            <!--         GRAFICA 2 - TRAFICO VS RESPUESTAS         -->
+            <!-- ================================================ -->
+
+            <div class="box">
+
+                <div class="level">
+
+                    <div class="level-left">
+
+                        <h2 class="title is-4">
+
+                            Tráfico vs Respuestas
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <canvas
+                    id="graficaComparativa"
+                    height="120">
+
+                </canvas>
+
+            </div>
+
+
+            <!-- ================================================ -->
+            <!--        RANKING ASESORES Y SUCURSALES             -->
+            <!-- ================================================ -->
+
+            <div class="columns">
+
+                <!-- Ranking Asesores -->
+
+                <div class="column">
+
+                    <div class="box">
+
+                        <h2 class="title is-4">
+
+                            Ranking de Asesores
+
+                        </h2>
+
+                        <canvas
+                            id="graficaAsesores"
+                            height="250">
+
+                        </canvas>
+
+                    </div>
+
+                </div>
+
+                <!-- Ranking Sucursales -->
+
+                <div class="column">
+
+                    <div class="box">
+
+                        <h2 class="title is-4">
+
+                            Ranking de Sucursales
+
+                        </h2>
+
+                        <canvas
+                            id="graficaRankingSucursales"
+                            height="250">
+
+                        </canvas>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================================================ -->
+            <!--          TENDENCIA MENSUAL                        -->
+            <!-- ================================================ -->
+
+            <div class="box">
+
+                <h2 class="title is-4">
+
+                    Tendencia Mensual
+
+                </h2>
+
+                <canvas
+                    id="graficaMensual"
+                    height="120">
+
+                </canvas>
+
+            </div>
+
+
+
+            <!-- ================================================ -->
+            <!--      RESPUESTAS MAS FRECUENTES                    -->
+            <!-- ================================================ -->
+
+            <div class="box">
+
+                <h2 class="title is-4">
+
+                    Top Respuestas de Clientes
+
+                </h2>
+
+                <canvas
+                    id="graficaRespuestas"
+                    height="120">
+
+                </canvas>
+
+            </div>
+
+
+
+
+            <!-- ================================================ -->
+            <!--             HORARIOS                              -->
+            <!-- ================================================ -->
+
+            <div class="box">
+
+                <h2 class="title is-4">
+
+                    Horarios con Mayor Afluencia
+
+                </h2>
+
+                <canvas
+                    id="graficaHoras"
+                    height="120">
+
+                </canvas>
+
+            </div>
+
+
+
+
+            <!-- ================================================ -->
+            <!--                TABLA                              -->
+            <!-- ================================================ -->
+
+            <div class="box">
+
+                <h2 class="title is-4">
+
+                    Últimos Registros
+
+                </h2>
+
+                <div class="table-container">
+
+                    <table class="table is-striped is-hoverable is-fullwidth">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Fecha</th>
+
+                                <th>Sucursal</th>
+
+                                <th>Vendedor</th>
+
+                                <th>Respuesta</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="tablaDatos">
+
+                            <!--
+                            Aquí iremos agregando los registros
+                            automáticamente desde Apps Script.
+                            -->
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- ================================================ -->
+            <!--                PIE                                -->
+            <!-- ================================================ -->
+
+            <footer class="footer">
+
+                <div class="content has-text-centered">
+
+                    <p>
+
+                        <strong>
+
+                            Samboro Analytics
+
+                        </strong>
+
+                        <br>
+
+                        Dashboard desarrollado con
+
+                        <strong>Bulma</strong> +
+
+                        <strong>Chart.js</strong> +
+
+                        <strong>Apps Script</strong>
+
+                    </p>
+
+                </div>
+
+            </footer>
