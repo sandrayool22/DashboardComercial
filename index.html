@@ -1,2 +1,355 @@
-# DashboardComercial
-Resultados de investigación “¿Y qué fue lo que lo trajo por acá hoy?”
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Samboro Analytics</title>
+
+    <!-- Bulma -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body class="has-background-light">
+
+    <!-- ===================================================== -->
+    <!--                  BARRA SUPERIOR                        -->
+    <!-- ===================================================== -->
+
+    <nav class="navbar is-danger">
+
+        <div class="navbar-brand">
+
+            <a class="navbar-item">
+
+                <strong class="has-text-white is-size-4">
+
+                    SAMBORO ANALYTICS
+
+                </strong>
+
+            </a>
+
+        </div>
+
+        <div class="navbar-end">
+
+            <div class="navbar-item">
+
+                <span class="has-text-white">
+
+                    Dashboard Comercial
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ===================================================== -->
+    <!--                  CONTENEDOR PRINCIPAL                 -->
+    <!-- ===================================================== -->
+
+    <section class="section">
+
+        <div class="container is-fluid">
+
+            <!-- ================================================ -->
+            <!--                  TITULO                          -->
+            <!-- ================================================ -->
+
+            <div class="mb-5">
+
+                <h1 class="title">
+
+                    Dashboard Ejecutivo
+
+                </h1>
+
+                <p class="subtitle">
+
+                    Inteligencia Comercial Samboro
+
+                </p>
+
+            </div>
+
+            <!-- ================================================ -->
+            <!--                  FILTROS                         -->
+            <!-- ================================================ -->
+
+            <div class="box">
+
+                <div class="columns">
+
+                    <div class="column">
+
+                        <label class="label">
+
+                            Fecha Inicio
+
+                        </label>
+
+                        <input
+                            id="fechaInicio"
+                            class="input"
+                            type="date">
+
+                    </div>
+
+                    <div class="column">
+
+                        <label class="label">
+
+                            Fecha Final
+
+                        </label>
+
+                        <input
+                            id="fechaFinal"
+                            class="input"
+                            type="date">
+
+                    </div>
+
+                    <div class="column">
+
+                        <label class="label">
+
+                            Sucursal
+
+                        </label>
+
+                        <div class="select is-fullwidth">
+
+                            <select id="cmbSucursal">
+
+                                <option>Todas</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="column">
+
+                        <label class="label">
+
+                            Vendedor
+
+                        </label>
+
+                        <div class="select is-fullwidth">
+
+                            <select id="cmbVendedor">
+
+                                <option>Todos</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                    <div class="column is-narrow">
+
+                        <label class="label">
+
+                            &nbsp;
+
+                        </label>
+
+                        <button
+                            class="button is-danger is-fullwidth"
+                            id="btnActualizar">
+
+                            <span class="icon">
+
+                                <i class="fas fa-arrows-rotate"></i>
+
+                            </span>
+
+                            <span>
+
+                                Actualizar
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================================================ -->
+            <!--                  KPIs                            -->
+            <!-- ================================================ -->
+
+            <div class="columns">
+
+                <!-- CLIENTES -->
+
+                <div class="column">
+
+                    <div class="box has-text-centered">
+
+                        <p class="heading">
+
+                            Clientes Registrados
+
+                        </p>
+
+                        <p
+                            class="title has-text-danger"
+                            id="clientes">
+
+                            0
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- TRAFICO -->
+
+                <div class="column">
+
+                    <div class="box has-text-centered">
+
+                        <p class="heading">
+
+                            Tráfico Total
+
+                        </p>
+
+                        <p
+                            class="title has-text-danger"
+                            id="trafico">
+
+                            0
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CAPTURA -->
+
+                <div class="column">
+
+                    <div class="box has-text-centered">
+
+                        <p class="heading">
+
+                            Captura
+
+                        </p>
+
+                        <p
+                            class="title has-text-danger"
+                            id="captura">
+
+                            0%
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- SUCURSAL -->
+
+                <div class="column">
+
+                    <div class="box has-text-centered">
+
+                        <p class="heading">
+
+                            Sucursal Líder
+
+                        </p>
+
+                        <p
+                            class="title has-text-danger"
+                            id="lider">
+
+                            -
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- ASESOR -->
+
+                <div class="column">
+
+                    <div class="box has-text-centered">
+
+                        <p class="heading">
+
+                            Asesor Líder
+
+                        </p>
+
+                        <p
+                            class="title has-text-danger"
+                            id="asesor">
+
+                            -
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- ================================================ -->
+            <!--          PRIMERA GRAFICA                         -->
+            <!-- ================================================ -->
+
+            <div class="box">
+
+                <div class="level">
+
+                    <div class="level-left">
+
+                        <h2 class="title is-4">
+
+                            Clientes por Sucursal
+
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <canvas
+                    id="graficaSucursales"
+                    height="120">
+
+                </canvas>
+
+            </div>
